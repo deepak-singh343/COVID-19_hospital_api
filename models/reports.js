@@ -12,11 +12,9 @@ const ReportSchema=new mongoose.Schema({
     doctor:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'Doctor'
-    },
-    date:{
-        type:Date,
-        required:true
     }
+},{
+    timestamps:true
 });
 const Report=mongoose.model('Report',ReportSchema);
 module.exports=Report;

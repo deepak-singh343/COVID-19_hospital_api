@@ -12,7 +12,11 @@ const PatientSchema=new mongoose.Schema({
     doctor:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'Doctor'
-    } 
+    },
+    report:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Report'
+    }]
 },{
     timestamps:true
 });
